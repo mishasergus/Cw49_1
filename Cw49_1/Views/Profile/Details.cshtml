@@ -1,0 +1,15 @@
+﻿@model Cw49_1.Models.MovieEntity
+
+<h2>Результат пошуку</h2>
+
+@if (Model == null)
+{
+    <p>Фільм не знайдено.</p>
+}
+else
+{
+    <p><strong>ID:</strong> @Model.Id</p>
+    <p><strong>Назва:</strong> @Model.Name</p>
+}
+
+<a asp-action="Index">Назад до списку</a>

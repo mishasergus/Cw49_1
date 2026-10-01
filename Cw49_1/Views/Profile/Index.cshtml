@@ -1,0 +1,18 @@
+﻿@model List<Cw49_1.Models.MovieEntity>
+
+<h2>Список фільмів</h2>
+<a asp-controller="Auth" asp-action="Logout">Вийти</a>
+
+<form asp-action="Search" method="get" style="margin-top: 15px;">
+    <input type="text" name="name" placeholder="Введіть назву..." />
+    <button type="submit">Шукати</button>
+</form>
+
+<hr />
+
+<ul>
+    @foreach (var movie in Model)
+    {
+        <li>@movie.Name</li>
+    }
+</ul>

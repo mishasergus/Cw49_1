@@ -1,0 +1,24 @@
+﻿@model Cw49_1.DTOs.UserDto
+
+<h2>Вхід у систему</h2>
+
+@if (ViewBag.Error != null)
+{
+    <p style="color:red">@ViewBag.Error</p>
+}
+
+<form asp-action="Login" method="post">
+    <div>
+        <label>UserName:</label>
+        <input asp-for="UserName" required />
+    </div>
+    <br />
+    <div>
+        <label>Password:</label>
+        <input asp-for="Password" type="password" required />
+    </div>
+    <br />
+    <button type="submit">Увійти</button>
+</form>
+
+<p>Ще немає акаунту? <a asp-action="Signup">Зареєструватися</a></p>
