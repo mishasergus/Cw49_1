@@ -22,6 +22,7 @@ public class ProfileController : Controller
     }
 
     [HttpGet]
+
     public async Task<IActionResult> Search(string name)
     {
         if (string.IsNullOrWhiteSpace(name))
